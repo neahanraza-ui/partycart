@@ -8,8 +8,14 @@ PartyCart is a PHP and MySQL e-commerce application branded as **LUXORA**. It in
 - Session-backed shopping cart and cart synchronization
 - Checkout, order processing, and order confirmation
 - Customer registration, sign-in, and profile pages
-- Admin tools for products, categories, customers, orders, store content, and metadata
-- A browser maze game in `game/Maze-Game-main`
+
+## Admin Panel
+
+The admin panel is available at `/admin/login.php`. It includes tools for managing products, categories, customers, orders, store content, and metadata. An admin account must already exist in the database to sign in.
+
+## Game
+
+The project also includes a browser maze game in `game/Maze-Game-main/`. After starting the local server, open `http://localhost:8000/game/Maze-Game-main/` to play.
 
 ## Requirements
 
