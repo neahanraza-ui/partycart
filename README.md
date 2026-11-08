@@ -11,11 +11,24 @@ PartyCart is a PHP and MySQL e-commerce application branded as **LUXORA**. It in
 
 ## Admin Panel
 
-The admin panel is available at `/admin/login.php`. It includes tools for managing products, categories, customers, orders, store content, and metadata. An admin account must already exist in the database to sign in.
+The admin panel is available at `/admin/login.php` and requires an existing admin account. Its dashboard summarizes order, product, and category counts. Admins can add and edit products and categories, review orders and update their status, read contact messages, manage customer and admin accounts, edit About Us content, and update page metadata.
 
 ## Game
 
-The project also includes a browser maze game in `game/Maze-Game-main/`. After starting the local server, open `http://localhost:8000/game/Maze-Game-main/` to play.
+The browser maze game is in `game/Maze-Game-main/`. After starting the local server, open `http://localhost:8000/game/Maze-Game-main/` to play. Players choose one of four difficulty levels and receive a reward offer after completing the maze.
+
+### Maze Coupons
+
+After completing the maze, a player can submit an email address to claim a coupon. The code is displayed in the game and can be entered at checkout; it is bound to the claiming email. The game allows one reward claim per email. Reward tiers shown by the game are:
+
+| Difficulty | Discount | Uses |
+| --- | ---: | ---: |
+| Easy | 5% | 1 |
+| Medium | 7% | 1 |
+| Hard | 15% | 2 |
+| Extreme | 20% | 2 |
+
+Coupon generation also records the email and difficulty in `game_log`. The database must include the `game_log` and coupon fields expected by the game; `fix_db.php` contains the related schema updates.
 
 ## Requirements
 
